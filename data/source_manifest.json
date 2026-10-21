@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "accessed_on": "2026-10-20",
+  "corpus_name": "Censo Demográfico 2022 — conceitos, metodologia e revisão dos primeiros resultados",
+  "scope": "Perguntas conceituais sobre o Censo 2022. Valores numéricos por município e orientações sobre serviços públicos não fazem parte da primeira versão.",
+  "sources": [
+    {
+      "id": "ibge-censo2022-primeiros-resultados",
+      "title": "Censo Demográfico 2022: População e domicílios — Primeiros resultados",
+      "publisher": "IBGE",
+      "publication_year": 2023,
+      "source_url": "https://biblioteca.ibge.gov.br/visualizacao/livros/liv102011.pdf",
+      "download_url": "https://www.ibge.gov.br/biblioteca/visualizacao/livros/liv102011.pdf",
+      "format": "pdf",
+      "local_path": "data/raw/liv102011.pdf",
+      "sha256": "5a69cf122fb16c5fc954ffc2a7e1c071a1ea79bb9ddf5c21fa614b1c9d7a8b89",
+      "file_size_bytes": 4451068,
+      "total_pdf_pages": 75,
+      "selected_pdf_pages": { "start": 11, "end": 19 },
+      "printed_page_offset": -5,
+      "included_sections": [
+        "Notas técnicas: obrigatoriedade, geografia censitária, metodologia de coleta e acompanhamento",
+        "Conceitos e definições: data de referência, população residente, morador, domicílios e taxa média de crescimento anual"
+      ],
+      "extraction_boundary": "Começar no título 'Notas técnicas' da página 11 do PDF e encerrar antes do título 'Tratamento dos dados' da página 19.",
+      "use_note": "Usar como fonte de conceitos e métodos; os totais publicados originalmente podem ter sido revisados."
+    },
+    {
+      "id": "ibge-censo2022-nota-revisao-01",
+      "title": "Atualização dos dados da publicação População e Domicílios: Primeiros Resultados — Nota metodológica n. 01",
+      "publisher": "IBGE",
+      "publication_year": 2023,
+      "source_url": "https://biblioteca.ibge.gov.br/visualizacao/livros/liv102037.pdf",
+      "download_url": "https://www.ibge.gov.br/biblioteca/visualizacao/livros/liv102037.pdf",
+      "format": "pdf",
+      "local_path": "data/raw/liv102037.pdf",
+      "sha256": "cf72eae48d107e7bc92f6a5d41e5f916d75f021318cbdb8b1f80a6f49c4965a7",
+      "file_size_bytes": 506312,
+      "total_pdf_pages": 24,
+      "selected_pdf_pages": { "start": 6, "end": 12 },
+      "printed_page_offset": 0,
+      "included_sections": [
+        "Introdução e política de revisão de dados",
+        "Revisão de campo",
+        "Tratamento dos dados"
+      ],
+      "extraction_boundary": "Usar as páginas 6 a 12 do PDF; excluir o apêndice de tabelas que começa na página 13.",
+      "use_note": "Usar para explicar a revisão entre a primeira e a segunda apuração; não usar como fonte direta de valores municipais."
+    }
+  ],
+  "reference_only": [
+    {
+      "title": "Página do Censo Demográfico 2022",
+      "url": "https://www.ibge.gov.br/estatisticas/sociais/populacao/22827-censo-demografico-2022.html",
+      "reason": "Página ampla e sujeita a atualizações; serve para descobrir publicações, mas não entra no índice inicial."
+    },
+    {
+      "title": "SIDRA — tabela 4709",
+      "url": "https://sidra.ibge.gov.br/tabela/4709/",
+      "reason": "Reservada para uma etapa posterior de consultas numéricas estruturadas."
+    }
+  ]
+}
