@@ -2,7 +2,7 @@
 
 Projeto de portfólio para Engenharia de IA. A proposta é ajudar pessoas a entender conceitos e métodos do Censo Demográfico 2022 do IBGE, mostrar os trechos usados como evidência e medir a qualidade das respostas.
 
-> **Estado:** Etapas 1 e 2 concluídas: corpus selecionado e conjunto inicial de avaliação criado. Implementação do pipeline ainda não iniciada. Projeto independente, sem vínculo com o IBGE.
+> **Estado:** Etapas 1–3 concluídas: corpus selecionado, avaliação criada e ingestão reproduzível implementada. Busca e geração ainda não iniciadas. Projeto independente, sem vínculo com o IBGE.
 
 ## Problema e resultado esperado
 
@@ -43,6 +43,18 @@ O projeto será feito em Python. O núcleo RAG poderá ser usado por uma API Fas
 
 Veja o [plano de arquitetura](docs/architecture.md) para o fluxo de uma pergunta, a estrutura de pastas e a medição de latência e tokens.
 
+## Ingestão local
+
+Com Python 3.11 ou superior, execute:
+
+```powershell
+python -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -e .
+.\.venv\Scripts\python.exe scripts\ingest.py --download
+```
+
+O comando verifica os hashes das fontes e grava trechos com páginas e URLs em `data/processed/chunks.jsonl`. Consulte a [documentação da ingestão](docs/ingestion.md) para formato, testes e limitações.
+
 ## Entregáveis para o portfólio
 
 - Código de ingestão, recuperação, geração e API.
@@ -52,7 +64,6 @@ Veja o [plano de arquitetura](docs/architecture.md) para o fluxo de uma pergunta
 
 ## Próximas etapas
 
-1. Implementar a ingestão reproduzível e conferir os trechos extraídos.
-2. Implementar a busca lexical e medir `recall@k`.
-3. Adicionar recuperação semântica, respostas fundamentadas e comparação de resultados.
-4. Integrar uma tabela do SIDRA apenas depois que as respostas conceituais estiverem avaliadas.
+1. Implementar a busca lexical e medir `recall@k`.
+2. Adicionar recuperação semântica, respostas fundamentadas e comparação de resultados.
+3. Integrar uma tabela do SIDRA apenas depois que as respostas conceituais estiverem avaliadas.

@@ -1,6 +1,6 @@
 # Arquitetura proposta
 
-Este documento descreve a implementação planejada. Ainda não há aplicação executável.
+Este documento descreve a arquitetura do projeto. A ingestão já é executável; busca, API e interface ainda são planejadas.
 
 ## O que é RAG neste projeto
 
