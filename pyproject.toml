@@ -7,7 +7,10 @@ name = "ibge-census-rag-assistant"
 version = "0.1.0"
 description = "Source-grounded RAG assistant for the 2022 Brazilian Census"
 requires-python = ">=3.11"
-dependencies = ["pypdf>=6,<7"]
+dependencies = ["pypdf>=6,<7", "scikit-learn==1.9.1"]
+
+[project.optional-dependencies]
+semantic = ["fastembed==0.9.1"]
 
 [tool.setuptools.packages.find]
 where = ["src"]

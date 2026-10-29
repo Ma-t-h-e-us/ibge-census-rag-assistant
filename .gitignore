@@ -1,6 +1,7 @@
 data/raw/
 data/inspection/
 data/processed/
+data/models/
 *.egg-info/
 .pytest_cache/
 __pycache__/

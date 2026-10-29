@@ -1,0 +1,3596 @@
+{
+  "corpus_sha256": "91344dfceacf496d694074b57fad686943283686014d968cae1bdad37fced9b5",
+  "chunk_count": 45,
+  "question_count": 34,
+  "metric_unit": "distinct (source_id, pdf_page) pairs; only expected_behavior=answer is scored",
+  "evaluation_note": "Exploratory comparison: the test split was visible during embedding-model selection; use a new holdout for a final generalization estimate.",
+  "semantic_model": "intfloat/multilingual-e5-small",
+  "semantic_model_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+  "semantic_vector_format": "e5-query-passage-o4-mean-l2-v1",
+  "versions": {
+    "scikit-learn": "1.9.1",
+    "fastembed": "0.9.1"
+  },
+  "methods": {
+    "lexical": {
+      "index_build_or_load_ms": 31.169,
+      "vector_cache_hit": null,
+      "splits": {
+        "dev": {
+          "questions": 20,
+          "answer_questions": 15,
+          "unscored_non_answer_questions": 5,
+          "any_page_hit_at_k": {
+            "1": 0.8667,
+            "3": 1,
+            "5": 1
+          },
+          "all_pages_hit_at_k": {
+            "1": 0.8667,
+            "3": 1,
+            "5": 1
+          },
+          "mean_page_recall_at_k": {
+            "1": 0.8667,
+            "3": 1.0,
+            "5": 1.0
+          },
+          "retrieval_latency_ms": {
+            "median": 0.681,
+            "p95": 0.92
+          }
+        },
+        "test": {
+          "questions": 14,
+          "answer_questions": 9,
+          "unscored_non_answer_questions": 5,
+          "any_page_hit_at_k": {
+            "1": 0.7778,
+            "3": 1,
+            "5": 1
+          },
+          "all_pages_hit_at_k": {
+            "1": 0.6667,
+            "3": 1,
+            "5": 1
+          },
+          "mean_page_recall_at_k": {
+            "1": 0.7222,
+            "3": 1.0,
+            "5": 1.0
+          },
+          "retrieval_latency_ms": {
+            "median": 0.697,
+            "p95": 0.944
+          }
+        }
+      },
+      "questions": [
+        {
+          "id": "Q001",
+          "split": "test",
+          "category": "conceitos",
+          "expected_behavior": "answer",
+          "retrieval_ms": 0.832,
+          "top_results": [
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p13:c3:8b619b399890",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 13,
+              "score": 0.11953
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p16:c2:5b0f96b03d9f",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 16,
+              "score": 0.10933
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p10:c3:e91f319e2b2a",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 10,
+              "score": 0.09451
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p15:c1:c156aece537f",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 15,
+              "score": 0.09016
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p16:c1:fe3d349e46f7",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 16,
+              "score": 0.08827
+            }
+          ],
+          "evidence_metrics": {
+            "1": {
+              "any_page_hit": false,
+              "all_pages_hit": false,
+              "page_recall": 0.0
+            },
+            "3": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            },
+            "5": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            }
+          }
+        },
+        {
+          "id": "Q002",
+          "split": "dev",
+          "category": "conceitos",
+          "expected_behavior": "answer",
+          "retrieval_ms": 0.857,
+          "top_results": [
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p16:c2:5b0f96b03d9f",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 16,
+              "score": 0.18876
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p16:c1:fe3d349e46f7",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 16,
+              "score": 0.14552
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p12:c2:88bf590bbcfd",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 12,
+              "score": 0.09425
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p7:c3:5c2a28965b37",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 7,
+              "score": 0.07657
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p8:c1:f94e8d187917",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 8,
+              "score": 0.07264
+            }
+          ],
+          "evidence_metrics": {
+            "1": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            },
+            "3": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            },
+            "5": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            }
+          }
+        },
+        {
+          "id": "Q003",
+          "split": "dev",
+          "category": "conceitos",
+          "expected_behavior": "answer",
+          "retrieval_ms": 0.771,
+          "top_results": [
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p16:c2:5b0f96b03d9f",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 16,
+              "score": 0.18272
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p16:c1:fe3d349e46f7",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 16,
+              "score": 0.1383
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p10:c2:439da6193c70",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 10,
+              "score": 0.10833
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p18:c1:54e60dd08af2",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 18,
+              "score": 0.1049
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p18:c2:04a465a357a9",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 18,
+              "score": 0.10421
+            }
+          ],
+          "evidence_metrics": {
+            "1": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            },
+            "3": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            },
+            "5": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            }
+          }
+        },
+        {
+          "id": "Q004",
+          "split": "test",
+          "category": "conceitos",
+          "expected_behavior": "answer",
+          "retrieval_ms": 0.726,
+          "top_results": [
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p16:c2:5b0f96b03d9f",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 16,
+              "score": 0.25324
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p10:c2:439da6193c70",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 10,
+              "score": 0.12116
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p16:c1:fe3d349e46f7",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 16,
+              "score": 0.11843
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p18:c1:54e60dd08af2",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 18,
+              "score": 0.10703
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p18:c2:04a465a357a9",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 18,
+              "score": 0.10013
+            }
+          ],
+          "evidence_metrics": {
+            "1": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            },
+            "3": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            },
+            "5": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            }
+          }
+        },
+        {
+          "id": "Q005",
+          "split": "dev",
+          "category": "conceitos",
+          "expected_behavior": "answer",
+          "retrieval_ms": 0.741,
+          "top_results": [
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p18:c1:54e60dd08af2",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 18,
+              "score": 0.13855
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p16:c2:5b0f96b03d9f",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 16,
+              "score": 0.11427
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p18:c2:04a465a357a9",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 18,
+              "score": 0.11204
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p13:c3:8b619b399890",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 13,
+              "score": 0.07886
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p16:c1:fe3d349e46f7",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 16,
+              "score": 0.077
+            }
+          ],
+          "evidence_metrics": {
+            "1": {
+              "any_page_hit": false,
+              "all_pages_hit": false,
+              "page_recall": 0.0
+            },
+            "3": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            },
+            "5": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            }
+          }
+        },
+        {
+          "id": "Q006",
+          "split": "dev",
+          "category": "conceitos",
+          "expected_behavior": "answer",
+          "retrieval_ms": 0.808,
+          "top_results": [
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p17:c2:5bf77b1b9431",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 17,
+              "score": 0.12791
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p17:c1:4105836771f6",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 17,
+              "score": 0.08514
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p12:c1:d841fda1471d",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 12,
+              "score": 0.07864
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p8:c1:f94e8d187917",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 8,
+              "score": 0.06819
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p11:c4:4b977df0eef3",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 11,
+              "score": 0.06354
+            }
+          ],
+          "evidence_metrics": {
+            "1": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            },
+            "3": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            },
+            "5": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            }
+          }
+        },
+        {
+          "id": "Q007",
+          "split": "test",
+          "category": "conceitos",
+          "expected_behavior": "answer",
+          "retrieval_ms": 0.727,
+          "top_results": [
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p18:c1:54e60dd08af2",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 18,
+              "score": 0.22003
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p18:c2:04a465a357a9",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 18,
+              "score": 0.21806
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p6:c1:734c2b0ae407",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 6,
+              "score": 0.04715
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p16:c2:5b0f96b03d9f",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 16,
+              "score": 0.03781
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p11:c2:9dd218609ba1",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 11,
+              "score": 0.03416
+            }
+          ],
+          "evidence_metrics": {
+            "1": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            },
+            "3": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            },
+            "5": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            }
+          }
+        },
+        {
+          "id": "Q008",
+          "split": "dev",
+          "category": "conceitos",
+          "expected_behavior": "answer",
+          "retrieval_ms": 0.674,
+          "top_results": [
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p18:c1:54e60dd08af2",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 18,
+              "score": 0.27858
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p18:c2:04a465a357a9",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 18,
+              "score": 0.1943
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p10:c3:e91f319e2b2a",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 10,
+              "score": 0.1013
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p11:c4:4b977df0eef3",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 11,
+              "score": 0.09895
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p10:c2:439da6193c70",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 10,
+              "score": 0.07494
+            }
+          ],
+          "evidence_metrics": {
+            "1": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            },
+            "3": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            },
+            "5": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            }
+          }
+        },
+        {
+          "id": "Q009",
+          "split": "dev",
+          "category": "conceitos",
+          "expected_behavior": "answer",
+          "retrieval_ms": 0.682,
+          "top_results": [
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p18:c2:04a465a357a9",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 18,
+              "score": 0.23947
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p18:c1:54e60dd08af2",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 18,
+              "score": 0.15072
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p16:c2:5b0f96b03d9f",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 16,
+              "score": 0.14278
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p10:c2:439da6193c70",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 10,
+              "score": 0.13033
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p14:c4:7f08e3356975",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 14,
+              "score": 0.12288
+            }
+          ],
+          "evidence_metrics": {
+            "1": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            },
+            "3": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            },
+            "5": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            }
+          }
+        },
+        {
+          "id": "Q010",
+          "split": "test",
+          "category": "conceitos",
+          "expected_behavior": "answer",
+          "retrieval_ms": 0.7,
+          "top_results": [
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p16:c2:5b0f96b03d9f",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 16,
+              "score": 0.21492
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p18:c2:04a465a357a9",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 18,
+              "score": 0.21184
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p11:c1:b9334e8788c0",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 11,
+              "score": 0.19713
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p16:c1:fe3d349e46f7",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 16,
+              "score": 0.16951
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p18:c1:54e60dd08af2",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 18,
+              "score": 0.14955
+            }
+          ],
+          "evidence_metrics": {
+            "1": {
+              "any_page_hit": false,
+              "all_pages_hit": false,
+              "page_recall": 0.0
+            },
+            "3": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            },
+            "5": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            }
+          }
+        },
+        {
+          "id": "Q011",
+          "split": "dev",
+          "category": "conceitos",
+          "expected_behavior": "answer",
+          "retrieval_ms": 0.658,
+          "top_results": [
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p18:c2:04a465a357a9",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 18,
+              "score": 0.07287
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p14:c2:bd8f367bb4ad",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 14,
+              "score": 0.05008
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p11:c2:9dd218609ba1",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 11,
+              "score": 0.04635
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p17:c1:4105836771f6",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 17,
+              "score": 0.03887
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p11:c1:ad59db4d0e58",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 11,
+              "score": 0.03886
+            }
+          ],
+          "evidence_metrics": {
+            "1": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            },
+            "3": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            },
+            "5": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            }
+          }
+        },
+        {
+          "id": "Q012",
+          "split": "dev",
+          "category": "conceitos",
+          "expected_behavior": "answer",
+          "retrieval_ms": 0.633,
+          "top_results": [
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p19:c1:c9efd51dca31",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 19,
+              "score": 0.15337
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p13:c3:8b619b399890",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 13,
+              "score": 0.11697
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p18:c2:04a465a357a9",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 18,
+              "score": 0.0702
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p11:c2:9dd218609ba1",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 11,
+              "score": 0.0685
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p11:c1:ad59db4d0e58",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 11,
+              "score": 0.06191
+            }
+          ],
+          "evidence_metrics": {
+            "1": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            },
+            "3": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            },
+            "5": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            }
+          }
+        },
+        {
+          "id": "Q013",
+          "split": "test",
+          "category": "indicadores",
+          "expected_behavior": "answer",
+          "retrieval_ms": 0.656,
+          "top_results": [
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p19:c1:c9efd51dca31",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 19,
+              "score": 0.28064
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p19:c2:0a3a49907a3f",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 19,
+              "score": 0.19516
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p12:c2:88bf590bbcfd",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 12,
+              "score": 0.02801
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p16:c1:fe3d349e46f7",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 16,
+              "score": 0.02799
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p16:c2:5b0f96b03d9f",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 16,
+              "score": 0.02793
+            }
+          ],
+          "evidence_metrics": {
+            "1": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            },
+            "3": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            },
+            "5": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            }
+          }
+        },
+        {
+          "id": "Q014",
+          "split": "dev",
+          "category": "indicadores",
+          "expected_behavior": "answer",
+          "retrieval_ms": 0.647,
+          "top_results": [
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p19:c2:0a3a49907a3f",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 19,
+              "score": 0.14848
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p14:c1:4fc8fcea11a9",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 14,
+              "score": 0.11659
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p19:c1:c9efd51dca31",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 19,
+              "score": 0.0929
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p12:c2:88bf590bbcfd",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 12,
+              "score": 0.07712
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p8:c1:f94e8d187917",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 8,
+              "score": 0.06441
+            }
+          ],
+          "evidence_metrics": {
+            "1": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            },
+            "3": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            },
+            "5": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            }
+          }
+        },
+        {
+          "id": "Q015",
+          "split": "dev",
+          "category": "metodologia",
+          "expected_behavior": "answer",
+          "retrieval_ms": 0.684,
+          "top_results": [
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p11:c2:ac4283f112da",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 11,
+              "score": 0.1493
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p13:c1:59c20885d399",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 13,
+              "score": 0.09908
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p12:c1:d841fda1471d",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 12,
+              "score": 0.07656
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p14:c1:4fc8fcea11a9",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 14,
+              "score": 0.07418
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p12:c3:8ee2c32dd0b9",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 12,
+              "score": 0.06363
+            }
+          ],
+          "evidence_metrics": {
+            "1": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            },
+            "3": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            },
+            "5": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            }
+          }
+        },
+        {
+          "id": "Q016",
+          "split": "test",
+          "category": "metodologia",
+          "expected_behavior": "answer",
+          "retrieval_ms": 0.694,
+          "top_results": [
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p12:c1:02100013aa29",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 12,
+              "score": 0.22879
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p14:c3:8730158a2534",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 14,
+              "score": 0.20536
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p11:c2:ac4283f112da",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 11,
+              "score": 0.08168
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p15:c1:c156aece537f",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 15,
+              "score": 0.07362
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p12:c3:8ee2c32dd0b9",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 12,
+              "score": 0.07123
+            }
+          ],
+          "evidence_metrics": {
+            "1": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            },
+            "3": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            },
+            "5": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            }
+          }
+        },
+        {
+          "id": "Q017",
+          "split": "dev",
+          "category": "metodologia",
+          "expected_behavior": "answer",
+          "retrieval_ms": 0.68,
+          "top_results": [
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p13:c1:59c20885d399",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 13,
+              "score": 0.13239
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p14:c1:4fc8fcea11a9",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 14,
+              "score": 0.09358
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p8:c1:f94e8d187917",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 8,
+              "score": 0.06688
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p15:c3:fb5a99c2240b",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 15,
+              "score": 0.06555
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p16:c2:5b0f96b03d9f",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 16,
+              "score": 0.06465
+            }
+          ],
+          "evidence_metrics": {
+            "1": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            },
+            "3": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            },
+            "5": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            }
+          }
+        },
+        {
+          "id": "Q018",
+          "split": "dev",
+          "category": "metodologia",
+          "expected_behavior": "answer",
+          "retrieval_ms": 0.649,
+          "top_results": [
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p13:c3:8b619b399890",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 13,
+              "score": 0.16097
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p12:c1:d841fda1471d",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 12,
+              "score": 0.07763
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p10:c4:a87dfff096d2",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 10,
+              "score": 0.03749
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p18:c1:54e60dd08af2",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 18,
+              "score": 0.03563
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p12:c3:8ee2c32dd0b9",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 12,
+              "score": 0.02971
+            }
+          ],
+          "evidence_metrics": {
+            "1": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            },
+            "3": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            },
+            "5": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            }
+          }
+        },
+        {
+          "id": "Q019",
+          "split": "test",
+          "category": "metodologia",
+          "expected_behavior": "answer",
+          "retrieval_ms": 0.66,
+          "top_results": [
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p14:c3:8730158a2534",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 14,
+              "score": 0.17313
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p15:c1:c156aece537f",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 15,
+              "score": 0.12346
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p15:c2:e0f661c7779a",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 15,
+              "score": 0.09435
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p12:c3:8ee2c32dd0b9",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 12,
+              "score": 0.09057
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p12:c4:05b47e73b95c",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 12,
+              "score": 0.08161
+            }
+          ],
+          "evidence_metrics": {
+            "1": {
+              "any_page_hit": true,
+              "all_pages_hit": false,
+              "page_recall": 0.5
+            },
+            "3": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            },
+            "5": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            }
+          }
+        },
+        {
+          "id": "Q020",
+          "split": "dev",
+          "category": "revisao",
+          "expected_behavior": "answer",
+          "retrieval_ms": 0.644,
+          "top_results": [
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p6:c1:734c2b0ae407",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 6,
+              "score": 0.15277
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p9:c2:2c5371594735",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 9,
+              "score": 0.11021
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p8:c1:f94e8d187917",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 8,
+              "score": 0.07497
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p7:c3:5c2a28965b37",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 7,
+              "score": 0.07108
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p18:c1:54e60dd08af2",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 18,
+              "score": 0.04947
+            }
+          ],
+          "evidence_metrics": {
+            "1": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            },
+            "3": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            },
+            "5": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            }
+          }
+        },
+        {
+          "id": "Q021",
+          "split": "test",
+          "category": "revisao",
+          "expected_behavior": "answer",
+          "retrieval_ms": 0.742,
+          "top_results": [
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p8:c1:f94e8d187917",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 8,
+              "score": 0.17342
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p16:c2:5b0f96b03d9f",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 16,
+              "score": 0.15232
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p16:c1:fe3d349e46f7",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 16,
+              "score": 0.13475
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p10:c2:439da6193c70",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 10,
+              "score": 0.12038
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p14:c4:7f08e3356975",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 14,
+              "score": 0.10024
+            }
+          ],
+          "evidence_metrics": {
+            "1": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            },
+            "3": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            },
+            "5": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            }
+          }
+        },
+        {
+          "id": "Q022",
+          "split": "dev",
+          "category": "revisao",
+          "expected_behavior": "answer",
+          "retrieval_ms": 0.744,
+          "top_results": [
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p6:c1:734c2b0ae407",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 6,
+              "score": 0.15544
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p9:c1:8882ad7b5b90",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 9,
+              "score": 0.1521
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p9:c2:2c5371594735",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 9,
+              "score": 0.09566
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p12:c1:02100013aa29",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 12,
+              "score": 0.05189
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p12:c2:eb824ae4e8ad",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 12,
+              "score": 0.04849
+            }
+          ],
+          "evidence_metrics": {
+            "1": {
+              "any_page_hit": false,
+              "all_pages_hit": false,
+              "page_recall": 0.0
+            },
+            "3": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            },
+            "5": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            }
+          }
+        },
+        {
+          "id": "Q023",
+          "split": "dev",
+          "category": "revisao",
+          "expected_behavior": "answer",
+          "retrieval_ms": 0.693,
+          "top_results": [
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p10:c2:439da6193c70",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 10,
+              "score": 0.15843
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p10:c1:6281a4ecbd6a",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 10,
+              "score": 0.12211
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p6:c1:734c2b0ae407",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 6,
+              "score": 0.07801
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p10:c3:e91f319e2b2a",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 10,
+              "score": 0.06475
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p16:c2:5b0f96b03d9f",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 16,
+              "score": 0.05644
+            }
+          ],
+          "evidence_metrics": {
+            "1": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            },
+            "3": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            },
+            "5": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            }
+          }
+        },
+        {
+          "id": "Q024",
+          "split": "test",
+          "category": "revisao",
+          "expected_behavior": "answer",
+          "retrieval_ms": 0.647,
+          "top_results": [
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p12:c2:88bf590bbcfd",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 12,
+              "score": 0.15537
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p10:c2:439da6193c70",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 10,
+              "score": 0.08704
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p10:c1:6281a4ecbd6a",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 10,
+              "score": 0.07158
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p9:c2:2c5371594735",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 9,
+              "score": 0.05607
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p19:c2:0a3a49907a3f",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 19,
+              "score": 0.05379
+            }
+          ],
+          "evidence_metrics": {
+            "1": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            },
+            "3": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            },
+            "5": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            }
+          }
+        },
+        {
+          "id": "Q025",
+          "split": "dev",
+          "category": "fora_do_escopo",
+          "expected_behavior": "abstain",
+          "retrieval_ms": 0.666,
+          "top_results": [
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p16:c2:5b0f96b03d9f",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 16,
+              "score": 0.1063
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p16:c1:fe3d349e46f7",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 16,
+              "score": 0.08348
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p14:c1:4fc8fcea11a9",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 14,
+              "score": 0.07938
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p10:c2:439da6193c70",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 10,
+              "score": 0.06766
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p12:c2:88bf590bbcfd",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 12,
+              "score": 0.06722
+            }
+          ]
+        },
+        {
+          "id": "Q026",
+          "split": "test",
+          "category": "fora_do_escopo",
+          "expected_behavior": "abstain",
+          "retrieval_ms": 0.692,
+          "top_results": [
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p19:c2:0a3a49907a3f",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 19,
+              "score": 0.17543
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p19:c1:c9efd51dca31",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 19,
+              "score": 0.0805
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p10:c4:a87dfff096d2",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 10,
+              "score": 0.08045
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p10:c3:e91f319e2b2a",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 10,
+              "score": 0.04726
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p16:c1:fe3d349e46f7",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 16,
+              "score": 0.03911
+            }
+          ]
+        },
+        {
+          "id": "Q027",
+          "split": "dev",
+          "category": "fora_do_escopo",
+          "expected_behavior": "abstain",
+          "retrieval_ms": 0.628,
+          "top_results": [
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p12:c2:88bf590bbcfd",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 12,
+              "score": 0.07742
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p10:c4:a87dfff096d2",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 10,
+              "score": 0.07244
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p19:c2:0a3a49907a3f",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 19,
+              "score": 0.0641
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p16:c1:fe3d349e46f7",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 16,
+              "score": 0.05485
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p7:c3:5c2a28965b37",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 7,
+              "score": 0.05391
+            }
+          ]
+        },
+        {
+          "id": "Q028",
+          "split": "test",
+          "category": "fora_do_escopo",
+          "expected_behavior": "abstain",
+          "retrieval_ms": 0.619,
+          "top_results": [
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p19:c2:0a3a49907a3f",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 19,
+              "score": 0.13463
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p19:c1:c9efd51dca31",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 19,
+              "score": 0.09623
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p18:c1:54e60dd08af2",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 18,
+              "score": 0.077
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p10:c4:a87dfff096d2",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 10,
+              "score": 0.05837
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p7:c1:b1f3186bc8df",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 7,
+              "score": 0.05131
+            }
+          ]
+        },
+        {
+          "id": "Q029",
+          "split": "dev",
+          "category": "fora_do_escopo",
+          "expected_behavior": "abstain",
+          "retrieval_ms": 0.912,
+          "top_results": [
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p14:c2:bd8f367bb4ad",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 14,
+              "score": 0.05748
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p12:c1:02100013aa29",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 12,
+              "score": 0.05156
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p6:c1:734c2b0ae407",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 6,
+              "score": 0.05084
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p10:c1:6281a4ecbd6a",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 10,
+              "score": 0.04372
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p8:c1:f94e8d187917",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 8,
+              "score": 0.03629
+            }
+          ]
+        },
+        {
+          "id": "Q030",
+          "split": "test",
+          "category": "fora_do_escopo",
+          "expected_behavior": "abstain",
+          "retrieval_ms": 1.152,
+          "top_results": [
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p11:c3:927a5ee78557",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 11,
+              "score": 0.10959
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p13:c2:1bee5fa2b89b",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 13,
+              "score": 0.05993
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p13:c1:59c20885d399",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 13,
+              "score": 0.05961
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p17:c2:5bf77b1b9431",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 17,
+              "score": 0.04227
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p17:c1:4105836771f6",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 17,
+              "score": 0.04221
+            }
+          ]
+        },
+        {
+          "id": "Q031",
+          "split": "dev",
+          "category": "ambigua",
+          "expected_behavior": "clarify",
+          "retrieval_ms": 1.069,
+          "top_results": [
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p18:c1:54e60dd08af2",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 18,
+              "score": 0.09286
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p12:c2:88bf590bbcfd",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 12,
+              "score": 0.06408
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p10:c4:a87dfff096d2",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 10,
+              "score": 0.04962
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p12:c1:d841fda1471d",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 12,
+              "score": 0.03865
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p16:c2:5b0f96b03d9f",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 16,
+              "score": 0.02938
+            }
+          ]
+        },
+        {
+          "id": "Q032",
+          "split": "test",
+          "category": "ambigua",
+          "expected_behavior": "clarify",
+          "retrieval_ms": 0.716,
+          "top_results": [
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p19:c2:0a3a49907a3f",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 19,
+              "score": 0.22067
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p19:c1:c9efd51dca31",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 19,
+              "score": 0.16335
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p18:c1:54e60dd08af2",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 18,
+              "score": 0.06806
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p10:c4:a87dfff096d2",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 10,
+              "score": 0.04052
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p12:c2:88bf590bbcfd",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 12,
+              "score": 0.02135
+            }
+          ]
+        },
+        {
+          "id": "Q033",
+          "split": "dev",
+          "category": "ambigua",
+          "expected_behavior": "clarify",
+          "retrieval_ms": 0.665,
+          "top_results": [
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p14:c3:8730158a2534",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 14,
+              "score": 0.06701
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p17:c2:5bf77b1b9431",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 17,
+              "score": 0.056
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p10:c4:a87dfff096d2",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 10,
+              "score": 0.05343
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p16:c2:5b0f96b03d9f",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 16,
+              "score": 0.04118
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p13:c3:8b619b399890",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 13,
+              "score": 0.03481
+            }
+          ]
+        },
+        {
+          "id": "Q034",
+          "split": "test",
+          "category": "ambigua",
+          "expected_behavior": "clarify",
+          "retrieval_ms": 0.656,
+          "top_results": [
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p10:c3:e91f319e2b2a",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 10,
+              "score": 0.11191
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p15:c1:c156aece537f",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 15,
+              "score": 0.09802
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p10:c4:a87dfff096d2",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 10,
+              "score": 0.09145
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p11:c4:4b977df0eef3",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 11,
+              "score": 0.08933
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p10:c2:439da6193c70",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 10,
+              "score": 0.08739
+            }
+          ]
+        }
+      ]
+    },
+    "semantic": {
+      "index_build_or_load_ms": 2282.548,
+      "vector_cache_hit": true,
+      "splits": {
+        "dev": {
+          "questions": 20,
+          "answer_questions": 15,
+          "unscored_non_answer_questions": 5,
+          "any_page_hit_at_k": {
+            "1": 0.8667,
+            "3": 0.9333,
+            "5": 1
+          },
+          "all_pages_hit_at_k": {
+            "1": 0.8667,
+            "3": 0.9333,
+            "5": 1
+          },
+          "mean_page_recall_at_k": {
+            "1": 0.8667,
+            "3": 0.9333,
+            "5": 1.0
+          },
+          "retrieval_latency_ms": {
+            "median": 10.82,
+            "p95": 14.222
+          }
+        },
+        "test": {
+          "questions": 14,
+          "answer_questions": 9,
+          "unscored_non_answer_questions": 5,
+          "any_page_hit_at_k": {
+            "1": 0.8889,
+            "3": 1,
+            "5": 1
+          },
+          "all_pages_hit_at_k": {
+            "1": 0.7778,
+            "3": 0.8889,
+            "5": 1
+          },
+          "mean_page_recall_at_k": {
+            "1": 0.8333,
+            "3": 0.9444,
+            "5": 1.0
+          },
+          "retrieval_latency_ms": {
+            "median": 11.765,
+            "p95": 14.16
+          }
+        }
+      },
+      "questions": [
+        {
+          "id": "Q001",
+          "split": "test",
+          "category": "conceitos",
+          "expected_behavior": "answer",
+          "retrieval_ms": 10.608,
+          "top_results": [
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p16:c2:5b0f96b03d9f",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 16,
+              "score": 0.89576
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p15:c3:fb5a99c2240b",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 15,
+              "score": 0.88748
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p12:c3:8ee2c32dd0b9",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 12,
+              "score": 0.8864
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p12:c2:88bf590bbcfd",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 12,
+              "score": 0.87982
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p10:c2:439da6193c70",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 10,
+              "score": 0.87867
+            }
+          ],
+          "evidence_metrics": {
+            "1": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            },
+            "3": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            },
+            "5": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            }
+          }
+        },
+        {
+          "id": "Q002",
+          "split": "dev",
+          "category": "conceitos",
+          "expected_behavior": "answer",
+          "retrieval_ms": 10.608,
+          "top_results": [
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p14:c3:8730158a2534",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 14,
+              "score": 0.89931
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p14:c2:bd8f367bb4ad",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 14,
+              "score": 0.88841
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p7:c3:5c2a28965b37",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 7,
+              "score": 0.88745
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p16:c2:5b0f96b03d9f",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 16,
+              "score": 0.886
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p8:c1:f94e8d187917",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 8,
+              "score": 0.87945
+            }
+          ],
+          "evidence_metrics": {
+            "1": {
+              "any_page_hit": false,
+              "all_pages_hit": false,
+              "page_recall": 0.0
+            },
+            "3": {
+              "any_page_hit": false,
+              "all_pages_hit": false,
+              "page_recall": 0.0
+            },
+            "5": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            }
+          }
+        },
+        {
+          "id": "Q003",
+          "split": "dev",
+          "category": "conceitos",
+          "expected_behavior": "answer",
+          "retrieval_ms": 11.378,
+          "top_results": [
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p16:c2:5b0f96b03d9f",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 16,
+              "score": 0.90083
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p8:c1:f94e8d187917",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 8,
+              "score": 0.88807
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p14:c3:8730158a2534",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 14,
+              "score": 0.88584
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p16:c1:fe3d349e46f7",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 16,
+              "score": 0.88139
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p14:c2:bd8f367bb4ad",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 14,
+              "score": 0.87965
+            }
+          ],
+          "evidence_metrics": {
+            "1": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            },
+            "3": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            },
+            "5": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            }
+          }
+        },
+        {
+          "id": "Q004",
+          "split": "test",
+          "category": "conceitos",
+          "expected_behavior": "answer",
+          "retrieval_ms": 10.551,
+          "top_results": [
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p16:c2:5b0f96b03d9f",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 16,
+              "score": 0.89888
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p16:c1:fe3d349e46f7",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 16,
+              "score": 0.87996
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p8:c1:f94e8d187917",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 8,
+              "score": 0.87527
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p7:c3:5c2a28965b37",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 7,
+              "score": 0.87384
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p14:c3:8730158a2534",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 14,
+              "score": 0.87373
+            }
+          ],
+          "evidence_metrics": {
+            "1": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            },
+            "3": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            },
+            "5": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            }
+          }
+        },
+        {
+          "id": "Q005",
+          "split": "dev",
+          "category": "conceitos",
+          "expected_behavior": "answer",
+          "retrieval_ms": 12.818,
+          "top_results": [
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p16:c2:5b0f96b03d9f",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 16,
+              "score": 0.8773
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p14:c4:7f08e3356975",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 14,
+              "score": 0.87422
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p13:c3:8b619b399890",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 13,
+              "score": 0.87411
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p8:c1:f94e8d187917",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 8,
+              "score": 0.86471
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p7:c3:5c2a28965b37",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 7,
+              "score": 0.86442
+            }
+          ],
+          "evidence_metrics": {
+            "1": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            },
+            "3": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            },
+            "5": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            }
+          }
+        },
+        {
+          "id": "Q006",
+          "split": "dev",
+          "category": "conceitos",
+          "expected_behavior": "answer",
+          "retrieval_ms": 11.001,
+          "top_results": [
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p17:c2:5bf77b1b9431",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 17,
+              "score": 0.91925
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p17:c1:4105836771f6",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 17,
+              "score": 0.88623
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p11:c4:4b977df0eef3",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 11,
+              "score": 0.85909
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p11:c5:e2c47491d9aa",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 11,
+              "score": 0.85327
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p11:c3:927a5ee78557",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 11,
+              "score": 0.84988
+            }
+          ],
+          "evidence_metrics": {
+            "1": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            },
+            "3": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            },
+            "5": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            }
+          }
+        },
+        {
+          "id": "Q007",
+          "split": "test",
+          "category": "conceitos",
+          "expected_behavior": "answer",
+          "retrieval_ms": 8.148,
+          "top_results": [
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p18:c1:54e60dd08af2",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 18,
+              "score": 0.87632
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p18:c2:04a465a357a9",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 18,
+              "score": 0.86129
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p17:c1:4105836771f6",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 17,
+              "score": 0.85874
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p17:c2:5bf77b1b9431",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 17,
+              "score": 0.85798
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p13:c3:8b619b399890",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 13,
+              "score": 0.8506
+            }
+          ],
+          "evidence_metrics": {
+            "1": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            },
+            "3": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            },
+            "5": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            }
+          }
+        },
+        {
+          "id": "Q008",
+          "split": "dev",
+          "category": "conceitos",
+          "expected_behavior": "answer",
+          "retrieval_ms": 8.891,
+          "top_results": [
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p18:c1:54e60dd08af2",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 18,
+              "score": 0.90412
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p10:c3:e91f319e2b2a",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 10,
+              "score": 0.8901
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p18:c2:04a465a357a9",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 18,
+              "score": 0.88762
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p10:c2:439da6193c70",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 10,
+              "score": 0.87058
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p17:c1:4105836771f6",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 17,
+              "score": 0.8656
+            }
+          ],
+          "evidence_metrics": {
+            "1": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            },
+            "3": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            },
+            "5": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            }
+          }
+        },
+        {
+          "id": "Q009",
+          "split": "dev",
+          "category": "conceitos",
+          "expected_behavior": "answer",
+          "retrieval_ms": 11.416,
+          "top_results": [
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p18:c2:04a465a357a9",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 18,
+              "score": 0.88767
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p18:c1:54e60dd08af2",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 18,
+              "score": 0.88098
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p14:c4:7f08e3356975",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 14,
+              "score": 0.86812
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p16:c2:5b0f96b03d9f",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 16,
+              "score": 0.86749
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p16:c3:3c93243b83fd",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 16,
+              "score": 0.8562
+            }
+          ],
+          "evidence_metrics": {
+            "1": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            },
+            "3": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            },
+            "5": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            }
+          }
+        },
+        {
+          "id": "Q010",
+          "split": "test",
+          "category": "conceitos",
+          "expected_behavior": "answer",
+          "retrieval_ms": 14.005,
+          "top_results": [
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p16:c2:5b0f96b03d9f",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 16,
+              "score": 0.89895
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p14:c4:7f08e3356975",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 14,
+              "score": 0.88767
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p18:c2:04a465a357a9",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 18,
+              "score": 0.88357
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p8:c1:f94e8d187917",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 8,
+              "score": 0.88329
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p10:c2:439da6193c70",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 10,
+              "score": 0.87382
+            }
+          ],
+          "evidence_metrics": {
+            "1": {
+              "any_page_hit": false,
+              "all_pages_hit": false,
+              "page_recall": 0.0
+            },
+            "3": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            },
+            "5": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            }
+          }
+        },
+        {
+          "id": "Q011",
+          "split": "dev",
+          "category": "conceitos",
+          "expected_behavior": "answer",
+          "retrieval_ms": 10.083,
+          "top_results": [
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p18:c2:04a465a357a9",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 18,
+              "score": 0.86943
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p18:c1:54e60dd08af2",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 18,
+              "score": 0.85088
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p11:c4:4b977df0eef3",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 11,
+              "score": 0.8504
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p17:c2:5bf77b1b9431",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 17,
+              "score": 0.85005
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p10:c3:e91f319e2b2a",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 10,
+              "score": 0.84998
+            }
+          ],
+          "evidence_metrics": {
+            "1": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            },
+            "3": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            },
+            "5": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            }
+          }
+        },
+        {
+          "id": "Q012",
+          "split": "dev",
+          "category": "conceitos",
+          "expected_behavior": "answer",
+          "retrieval_ms": 9.371,
+          "top_results": [
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p17:c2:5bf77b1b9431",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 17,
+              "score": 0.87195
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p19:c1:c9efd51dca31",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 19,
+              "score": 0.8607
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p18:c2:04a465a357a9",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 18,
+              "score": 0.85489
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p18:c1:54e60dd08af2",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 18,
+              "score": 0.85146
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p11:c4:4b977df0eef3",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 11,
+              "score": 0.84195
+            }
+          ],
+          "evidence_metrics": {
+            "1": {
+              "any_page_hit": false,
+              "all_pages_hit": false,
+              "page_recall": 0.0
+            },
+            "3": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            },
+            "5": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            }
+          }
+        },
+        {
+          "id": "Q013",
+          "split": "test",
+          "category": "indicadores",
+          "expected_behavior": "answer",
+          "retrieval_ms": 9.79,
+          "top_results": [
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p19:c2:0a3a49907a3f",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 19,
+              "score": 0.87744
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p19:c1:c9efd51dca31",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 19,
+              "score": 0.86828
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p8:c1:f94e8d187917",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 8,
+              "score": 0.85363
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p6:c1:734c2b0ae407",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 6,
+              "score": 0.84394
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p11:c1:b9334e8788c0",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 11,
+              "score": 0.84172
+            }
+          ],
+          "evidence_metrics": {
+            "1": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            },
+            "3": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            },
+            "5": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            }
+          }
+        },
+        {
+          "id": "Q014",
+          "split": "dev",
+          "category": "indicadores",
+          "expected_behavior": "answer",
+          "retrieval_ms": 9.893,
+          "top_results": [
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p19:c2:0a3a49907a3f",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 19,
+              "score": 0.89027
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p7:c3:5c2a28965b37",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 7,
+              "score": 0.87402
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p8:c1:f94e8d187917",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 8,
+              "score": 0.87143
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p12:c2:88bf590bbcfd",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 12,
+              "score": 0.86901
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p6:c1:734c2b0ae407",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 6,
+              "score": 0.8685
+            }
+          ],
+          "evidence_metrics": {
+            "1": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            },
+            "3": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            },
+            "5": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            }
+          }
+        },
+        {
+          "id": "Q015",
+          "split": "dev",
+          "category": "metodologia",
+          "expected_behavior": "answer",
+          "retrieval_ms": 9.274,
+          "top_results": [
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p11:c2:ac4283f112da",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 11,
+              "score": 0.87483
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p14:c2:bd8f367bb4ad",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 14,
+              "score": 0.87194
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p14:c1:4fc8fcea11a9",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 14,
+              "score": 0.86984
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p7:c3:5c2a28965b37",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 7,
+              "score": 0.86834
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p13:c1:59c20885d399",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 13,
+              "score": 0.86775
+            }
+          ],
+          "evidence_metrics": {
+            "1": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            },
+            "3": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            },
+            "5": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            }
+          }
+        },
+        {
+          "id": "Q016",
+          "split": "test",
+          "category": "metodologia",
+          "expected_behavior": "answer",
+          "retrieval_ms": 11.923,
+          "top_results": [
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p12:c1:02100013aa29",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 12,
+              "score": 0.88036
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p14:c3:8730158a2534",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 14,
+              "score": 0.86825
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p13:c3:8b619b399890",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 13,
+              "score": 0.86603
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p11:c1:b9334e8788c0",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 11,
+              "score": 0.8613
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p11:c2:ac4283f112da",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 11,
+              "score": 0.85774
+            }
+          ],
+          "evidence_metrics": {
+            "1": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            },
+            "3": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            },
+            "5": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            }
+          }
+        },
+        {
+          "id": "Q017",
+          "split": "dev",
+          "category": "metodologia",
+          "expected_behavior": "answer",
+          "retrieval_ms": 10.523,
+          "top_results": [
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p13:c1:59c20885d399",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 13,
+              "score": 0.90005
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p14:c3:8730158a2534",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 14,
+              "score": 0.87981
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p14:c2:bd8f367bb4ad",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 14,
+              "score": 0.8778
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p15:c3:fb5a99c2240b",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 15,
+              "score": 0.87456
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p7:c3:5c2a28965b37",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 7,
+              "score": 0.87076
+            }
+          ],
+          "evidence_metrics": {
+            "1": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            },
+            "3": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            },
+            "5": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            }
+          }
+        },
+        {
+          "id": "Q018",
+          "split": "dev",
+          "category": "metodologia",
+          "expected_behavior": "answer",
+          "retrieval_ms": 9.516,
+          "top_results": [
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p13:c3:8b619b399890",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 13,
+              "score": 0.87486
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p14:c2:bd8f367bb4ad",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 14,
+              "score": 0.83956
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p9:c2:2c5371594735",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 9,
+              "score": 0.83772
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p11:c2:ac4283f112da",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 11,
+              "score": 0.8338
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p14:c3:8730158a2534",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 14,
+              "score": 0.83165
+            }
+          ],
+          "evidence_metrics": {
+            "1": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            },
+            "3": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            },
+            "5": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            }
+          }
+        },
+        {
+          "id": "Q019",
+          "split": "test",
+          "category": "metodologia",
+          "expected_behavior": "answer",
+          "retrieval_ms": 12.604,
+          "top_results": [
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p15:c1:c156aece537f",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 15,
+              "score": 0.87539
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p12:c4:05b47e73b95c",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 12,
+              "score": 0.84853
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p15:c2:e0f661c7779a",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 15,
+              "score": 0.84611
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p15:c4:48ef6c7e7c86",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 15,
+              "score": 0.84177
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p14:c3:8730158a2534",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 14,
+              "score": 0.83887
+            }
+          ],
+          "evidence_metrics": {
+            "1": {
+              "any_page_hit": true,
+              "all_pages_hit": false,
+              "page_recall": 0.5
+            },
+            "3": {
+              "any_page_hit": true,
+              "all_pages_hit": false,
+              "page_recall": 0.5
+            },
+            "5": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            }
+          }
+        },
+        {
+          "id": "Q020",
+          "split": "dev",
+          "category": "revisao",
+          "expected_behavior": "answer",
+          "retrieval_ms": 11.707,
+          "top_results": [
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p6:c1:734c2b0ae407",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 6,
+              "score": 0.85618
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p9:c2:2c5371594735",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 9,
+              "score": 0.85369
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p7:c3:5c2a28965b37",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 7,
+              "score": 0.84991
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p7:c2:022cdb9e867d",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 7,
+              "score": 0.84153
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p7:c1:b1f3186bc8df",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 7,
+              "score": 0.83952
+            }
+          ],
+          "evidence_metrics": {
+            "1": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            },
+            "3": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            },
+            "5": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            }
+          }
+        },
+        {
+          "id": "Q021",
+          "split": "test",
+          "category": "revisao",
+          "expected_behavior": "answer",
+          "retrieval_ms": 14.449,
+          "top_results": [
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p8:c1:f94e8d187917",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 8,
+              "score": 0.91439
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p7:c3:5c2a28965b37",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 7,
+              "score": 0.89536
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p6:c1:734c2b0ae407",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 6,
+              "score": 0.88966
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p14:c3:8730158a2534",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 14,
+              "score": 0.88827
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p15:c1:c156aece537f",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 15,
+              "score": 0.8823
+            }
+          ],
+          "evidence_metrics": {
+            "1": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            },
+            "3": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            },
+            "5": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            }
+          }
+        },
+        {
+          "id": "Q022",
+          "split": "dev",
+          "category": "revisao",
+          "expected_behavior": "answer",
+          "retrieval_ms": 14.661,
+          "top_results": [
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p9:c1:8882ad7b5b90",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 9,
+              "score": 0.88941
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p9:c2:2c5371594735",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 9,
+              "score": 0.84794
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p6:c1:734c2b0ae407",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 6,
+              "score": 0.84589
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p7:c3:5c2a28965b37",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 7,
+              "score": 0.832
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p11:c1:b9334e8788c0",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 11,
+              "score": 0.83163
+            }
+          ],
+          "evidence_metrics": {
+            "1": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            },
+            "3": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            },
+            "5": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            }
+          }
+        },
+        {
+          "id": "Q023",
+          "split": "dev",
+          "category": "revisao",
+          "expected_behavior": "answer",
+          "retrieval_ms": 14.199,
+          "top_results": [
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p10:c1:6281a4ecbd6a",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 10,
+              "score": 0.88431
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p14:c3:8730158a2534",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 14,
+              "score": 0.87052
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p7:c3:5c2a28965b37",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 7,
+              "score": 0.86321
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p14:c2:bd8f367bb4ad",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 14,
+              "score": 0.8604
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p10:c2:439da6193c70",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 10,
+              "score": 0.85973
+            }
+          ],
+          "evidence_metrics": {
+            "1": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            },
+            "3": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            },
+            "5": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            }
+          }
+        },
+        {
+          "id": "Q024",
+          "split": "test",
+          "category": "revisao",
+          "expected_behavior": "answer",
+          "retrieval_ms": 13.434,
+          "top_results": [
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p12:c2:88bf590bbcfd",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 12,
+              "score": 0.87335
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p13:c3:8b619b399890",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 13,
+              "score": 0.86515
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p6:c1:734c2b0ae407",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 6,
+              "score": 0.85765
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p9:c2:2c5371594735",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 9,
+              "score": 0.85107
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p7:c3:5c2a28965b37",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 7,
+              "score": 0.85026
+            }
+          ],
+          "evidence_metrics": {
+            "1": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            },
+            "3": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            },
+            "5": {
+              "any_page_hit": true,
+              "all_pages_hit": true,
+              "page_recall": 1.0
+            }
+          }
+        },
+        {
+          "id": "Q025",
+          "split": "dev",
+          "category": "fora_do_escopo",
+          "expected_behavior": "abstain",
+          "retrieval_ms": 10.639,
+          "top_results": [
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p8:c1:f94e8d187917",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 8,
+              "score": 0.85999
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p12:c2:88bf590bbcfd",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 12,
+              "score": 0.85097
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p6:c1:734c2b0ae407",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 6,
+              "score": 0.84313
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p15:c3:fb5a99c2240b",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 15,
+              "score": 0.84236
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p16:c1:fe3d349e46f7",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 16,
+              "score": 0.83839
+            }
+          ]
+        },
+        {
+          "id": "Q026",
+          "split": "test",
+          "category": "fora_do_escopo",
+          "expected_behavior": "abstain",
+          "retrieval_ms": 12.006,
+          "top_results": [
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p19:c2:0a3a49907a3f",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 19,
+              "score": 0.84121
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p8:c1:f94e8d187917",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 8,
+              "score": 0.83661
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p16:c1:fe3d349e46f7",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 16,
+              "score": 0.83109
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p15:c3:fb5a99c2240b",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 15,
+              "score": 0.8277
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p15:c2:e0f661c7779a",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 15,
+              "score": 0.82721
+            }
+          ]
+        },
+        {
+          "id": "Q027",
+          "split": "dev",
+          "category": "fora_do_escopo",
+          "expected_behavior": "abstain",
+          "retrieval_ms": 11.143,
+          "top_results": [
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p12:c2:88bf590bbcfd",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 12,
+              "score": 0.85047
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p16:c1:fe3d349e46f7",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 16,
+              "score": 0.84893
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p8:c1:f94e8d187917",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 8,
+              "score": 0.84283
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p10:c3:e91f319e2b2a",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 10,
+              "score": 0.83865
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p7:c3:5c2a28965b37",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 7,
+              "score": 0.83651
+            }
+          ]
+        },
+        {
+          "id": "Q028",
+          "split": "test",
+          "category": "fora_do_escopo",
+          "expected_behavior": "abstain",
+          "retrieval_ms": 12.701,
+          "top_results": [
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p6:c1:734c2b0ae407",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 6,
+              "score": 0.82124
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p16:c1:fe3d349e46f7",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 16,
+              "score": 0.81826
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p8:c1:f94e8d187917",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 8,
+              "score": 0.81785
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p15:c3:fb5a99c2240b",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 15,
+              "score": 0.81698
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p11:c1:b9334e8788c0",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 11,
+              "score": 0.81619
+            }
+          ]
+        },
+        {
+          "id": "Q029",
+          "split": "dev",
+          "category": "fora_do_escopo",
+          "expected_behavior": "abstain",
+          "retrieval_ms": 11.418,
+          "top_results": [
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p12:c1:02100013aa29",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 12,
+              "score": 0.83451
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p13:c3:8b619b399890",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 13,
+              "score": 0.8287
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p14:c4:7f08e3356975",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 14,
+              "score": 0.81816
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p9:c2:2c5371594735",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 9,
+              "score": 0.81763
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p14:c3:8730158a2534",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 14,
+              "score": 0.81622
+            }
+          ]
+        },
+        {
+          "id": "Q030",
+          "split": "test",
+          "category": "fora_do_escopo",
+          "expected_behavior": "abstain",
+          "retrieval_ms": 11.608,
+          "top_results": [
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p6:c1:734c2b0ae407",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 6,
+              "score": 0.83343
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p11:c3:927a5ee78557",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 11,
+              "score": 0.83264
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p12:c2:88bf590bbcfd",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 12,
+              "score": 0.83173
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p12:c3:8ee2c32dd0b9",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 12,
+              "score": 0.82942
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p7:c3:5c2a28965b37",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 7,
+              "score": 0.82937
+            }
+          ]
+        },
+        {
+          "id": "Q031",
+          "split": "dev",
+          "category": "ambigua",
+          "expected_behavior": "clarify",
+          "retrieval_ms": 8.133,
+          "top_results": [
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p12:c2:88bf590bbcfd",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 12,
+              "score": 0.8608
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p8:c1:f94e8d187917",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 8,
+              "score": 0.84356
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p6:c1:734c2b0ae407",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 6,
+              "score": 0.83522
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p10:c4:a87dfff096d2",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 10,
+              "score": 0.831
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p16:c2:5b0f96b03d9f",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 16,
+              "score": 0.83034
+            }
+          ]
+        },
+        {
+          "id": "Q032",
+          "split": "test",
+          "category": "ambigua",
+          "expected_behavior": "clarify",
+          "retrieval_ms": 11.374,
+          "top_results": [
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p19:c2:0a3a49907a3f",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 19,
+              "score": 0.83652
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p19:c1:c9efd51dca31",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 19,
+              "score": 0.83369
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p11:c1:b9334e8788c0",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 11,
+              "score": 0.81482
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p8:c1:f94e8d187917",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 8,
+              "score": 0.80875
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p6:c1:734c2b0ae407",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 6,
+              "score": 0.80836
+            }
+          ]
+        },
+        {
+          "id": "Q033",
+          "split": "dev",
+          "category": "ambigua",
+          "expected_behavior": "clarify",
+          "retrieval_ms": 12.34,
+          "top_results": [
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p8:c1:f94e8d187917",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 8,
+              "score": 0.86793
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p7:c3:5c2a28965b37",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 7,
+              "score": 0.85847
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p13:c3:8b619b399890",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 13,
+              "score": 0.8506
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p6:c1:734c2b0ae407",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 6,
+              "score": 0.84943
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p14:c4:7f08e3356975",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 14,
+              "score": 0.8466
+            }
+          ]
+        },
+        {
+          "id": "Q034",
+          "split": "test",
+          "category": "ambigua",
+          "expected_behavior": "clarify",
+          "retrieval_ms": 10.003,
+          "top_results": [
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p17:c2:5bf77b1b9431",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 17,
+              "score": 0.87194
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p10:c4:a87dfff096d2",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 10,
+              "score": 0.86189
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p10:c3:e91f319e2b2a",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 10,
+              "score": 0.85751
+            },
+            {
+              "chunk_id": "ibge-censo2022-nota-revisao-01:p11:c2:9dd218609ba1",
+              "source_id": "ibge-censo2022-nota-revisao-01",
+              "pdf_page": 11,
+              "score": 0.85521
+            },
+            {
+              "chunk_id": "ibge-censo2022-primeiros-resultados:p13:c3:8b619b399890",
+              "source_id": "ibge-censo2022-primeiros-resultados",
+              "pdf_page": 13,
+              "score": 0.85376
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

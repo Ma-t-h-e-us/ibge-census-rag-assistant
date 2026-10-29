@@ -14,10 +14,12 @@
 
 ## Como usar na avaliação
 
-1. Para `answer`, medir se ao menos uma página de `evidence` aparece entre os cinco primeiros trechos (`recall@5`). Se a pergunta exigir duas páginas, revisar também se a resposta usou as duas informações necessárias.
+1. Para `answer`, medir se ao menos uma página de `evidence` aparece entre os cinco primeiros trechos (`any-page hit@5`). Medir separadamente a fração de páginas esperadas (`mean page recall@5`) e se todas elas apareceram. Se a pergunta exigir duas páginas, revisar também se a resposta usou as duas informações necessárias.
 2. Revisar a resposta segundo três critérios separados: correção factual, sustentação nas fontes citadas e clareza. Uma citação presente não prova, sozinha, que a afirmação está sustentada.
 3. Para `abstain`, verificar que o sistema declara a limitação e não inventa um número, procedimento ou projeção.
 4. Para `clarify`, verificar que o sistema pede a informação faltante antes de dar um valor específico.
 5. Reportar resultados de `dev` e `test` separadamente. As perguntas de `test` são versionadas para reprodutibilidade, mas não devem orientar ajustes finos durante o desenvolvimento; portanto, não constituem uma avaliação cega.
 
 O conjunto foi preparado antes da implementação da busca. As respostas de referência devem ser revisadas quando o corpus mudar. Não enviar `reference_summary` ou `reason` ao modelo durante uma consulta: esses campos servem apenas para avaliar a saída.
+
+A Etapa 4 avalia somente recuperação, com o comando `scripts/evaluate.py`. As perguntas `abstain` e `clarify` são executadas para inspeção, mas não recebem uma nota de abstenção, porque ainda não existe um componente que decida a resposta. O [relatório da execução](results/retrieval_report.json) separa `dev` e `test`. Uma alternativa de modelo também foi examinada em `test` durante esta etapa; por isso, os números atuais de `test` são exploratórios, e será necessário criar novas perguntas reservadas para uma estimativa final de generalização.

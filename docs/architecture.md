@@ -1,6 +1,6 @@
 # Arquitetura proposta
 
-Este documento descreve a arquitetura do projeto. A ingestão já é executável; busca, API e interface ainda são planejadas.
+Este documento descreve a arquitetura do projeto. Ingestão e busca já são executáveis; geração, API e interface ainda são planejadas.
 
 ## O que é RAG neste projeto
 
@@ -35,6 +35,7 @@ A ingestão ocorre quando o corpus é criado ou atualizado. Busca e geração oc
 │   ├── ingestion.py               # Extrai texto e preserva a origem
 │   ├── chunking.py                # Divide documentos em trechos
 │   ├── retrieval.py               # Busca lexical e semântica
+│   ├── evaluation.py              # Mede recuperação por página
 │   ├── generation.py              # Monta o contexto e gera a resposta
 │   ├── metrics.py                 # Latência, tokens e custo estimado
 │   ├── schemas.py                 # Formatos de pergunta, resposta e fontes
@@ -43,13 +44,14 @@ A ingestão ocorre quando o corpus é criado ou atualizado. Busca e geração oc
 │   └── app.py                     # Interface Streamlit
 ├── scripts/
 │   ├── ingest.py                  # Recria o índice
-│   └── evaluate.py                # Executa perguntas de avaliação
+│   ├── search.py                  # Inspeciona trechos para uma pergunta
+│   └── evaluate.py                # Compara as duas buscas
 ├── eval/
 │   └── questions.jsonl           # Perguntas e fontes esperadas
 └── tests/                         # Testes do pipeline e da API
 ```
 
-`data/` guardará downloads, índices e registros locais e ficará fora do Git quando contiver arquivos grandes ou dados de uso. `src/censo_rag/` concentra a lógica para que API, interface e avaliação usem exatamente o mesmo fluxo.
+`data/` guarda downloads, índices e modelos locais, ignorados pelo Git; o manifesto de fontes é versionado. `src/censo_rag/` concentra a lógica para que API, interface e avaliação usem exatamente o mesmo fluxo. O relatório pequeno de avaliação em `eval/results/` é versionado como amostra reproduzível.
 
 ## Interface
 
@@ -76,11 +78,11 @@ Os tokens devem vir, de preferência, dos metadados da resposta do provedor; con
 
 ## Como avaliar qualidade
 
-O arquivo `eval/questions.jsonl` terá perguntas respondíveis, ambíguas e fora do escopo, com a fonte esperada e o comportamento esperado. A avaliação medirá:
+O arquivo `eval/questions.jsonl` contém perguntas respondíveis, ambíguas e fora do escopo, com a fonte esperada e o comportamento esperado. A avaliação do fluxo completo medirá:
 
-1. `recall@5`: em quantas perguntas a fonte correta aparece nos cinco primeiros trechos.
+1. `any-page hit@5`: em quantas perguntas respondíveis pelo menos uma página esperada aparece nos cinco primeiros trechos; registrar também a fração de páginas esperadas recuperadas.
 2. Correção da resposta e suporte nas fontes, revisados com critérios documentados.
 3. Abstenção em perguntas sem evidência suficiente.
 4. Latência e tokens por pergunta e por versão do sistema.
 
-Primeiro será implementada uma busca lexical para estabelecer uma referência. Depois entra a busca semântica; a geração só será acrescentada quando conseguirmos verificar se os trechos certos estão sendo recuperados. Isso permite identificar se uma resposta ruim veio da busca ou da geração.
+A busca lexical e a semântica já estão implementadas e comparadas em [resultados da recuperação](retrieval.md). A geração virá depois, de modo que uma resposta ruim possa ser investigada separadamente na busca e na geração.

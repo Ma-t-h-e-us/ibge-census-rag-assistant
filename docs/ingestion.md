@@ -27,4 +27,4 @@ Os trechos têm até 180 palavras e sobreposição de 35 palavras, sem cruzar p�
 
 ## Limitação conhecida
 
-A extração com `pypdf` contém, em alguns pontos, espaços inseridos dentro de palavras no PDF original. O pipeline remove cabeçalhos repetidos, números de página isolados e quebras de linha; não une palavras arbitrariamente, pois isso poderia alterar nomes ou números. A qualidade de busca desses trechos será observada na Etapa 4.
+A extração com `pypdf` contém, em alguns pontos, espaços inseridos dentro de palavras no PDF original. O pipeline remove cabeçalhos repetidos, números de página isolados e quebras de linha; não une palavras arbitrariamente, pois isso poderia alterar nomes ou números. A [Etapa 4](retrieval.md) mediu a busca sobre esses trechos; a extração ainda pode ser aperfeiçoada após revisar falhas específicas.
