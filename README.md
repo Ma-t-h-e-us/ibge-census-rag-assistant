@@ -2,7 +2,7 @@
 
 Projeto de portfólio para Engenharia de IA. A proposta é ajudar pessoas a entender conceitos e métodos do Censo Demográfico 2022 do IBGE, mostrar os trechos usados como evidência e medir a qualidade das respostas.
 
-> **Estado:** Etapa 1 concluída: corpus inicial selecionado e registrado. Implementação ainda não iniciada. Projeto independente, sem vínculo com o IBGE.
+> **Estado:** Etapas 1 e 2 concluídas: corpus selecionado e conjunto inicial de avaliação criado. Implementação do pipeline ainda não iniciada. Projeto independente, sem vínculo com o IBGE.
 
 ## Problema e resultado esperado
 
@@ -16,6 +16,8 @@ O projeto deve permitir comparar uma busca inicial simples com uma versão RAG e
 - [Nota de atualização dos primeiros resultados](https://biblioteca.ibge.gov.br/visualizacao/livros/liv102037.pdf): revisão dos resultados nas páginas 6–12 do PDF.
 
 O [manifesto de fontes](data/source_manifest.json) registra URLs, páginas e hashes dos arquivos baixados. A [seleção do corpus](docs/corpus_selection.md) explica o recorte, a conferência manual e as exclusões. A [página geral do Censo](https://www.ibge.gov.br/estatisticas/sociais/populacao/22827-censo-demografico-2022.html), a [API de Localidades](https://servicodados.ibge.gov.br/api/docs/localidades) e a [tabela 4709 do SIDRA](https://sidra.ibge.gov.br/tabela/4709/) são referências para futuras expansões; não entram no índice inicial.
+
+O [conjunto inicial de avaliação](eval/README.md) contém perguntas respondíveis, fora do escopo e ambíguas, com páginas de referência para conferir a recuperação e as respostas.
 
 ## Primeira versão
 
@@ -50,8 +52,7 @@ Veja o [plano de arquitetura](docs/architecture.md) para o fluxo de uma pergunta
 
 ## Próximas etapas
 
-1. Escrever as primeiras perguntas de avaliação antes de ajustar a busca e a geração.
-2. Implementar a ingestão reproduzível e conferir os trechos extraídos.
-3. Implementar a busca lexical e medir `recall@k`.
-4. Adicionar recuperação semântica, respostas fundamentadas e comparação de resultados.
-5. Integrar uma tabela do SIDRA apenas depois que as respostas conceituais estiverem avaliadas.
+1. Implementar a ingestão reproduzível e conferir os trechos extraídos.
+2. Implementar a busca lexical e medir `recall@k`.
+3. Adicionar recuperação semântica, respostas fundamentadas e comparação de resultados.
+4. Integrar uma tabela do SIDRA apenas depois que as respostas conceituais estiverem avaliadas.
